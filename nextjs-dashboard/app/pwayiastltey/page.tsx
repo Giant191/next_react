@@ -17,7 +17,7 @@ export default function Page() {
             <a href="nextjs-dashboard/app/pwayiastltey/S__241999875.jpg" target="_blank">
                 <Button> Link Button </Button>
             </a>
-            <a download="S__241999875.jpg" target="_blank" href="nextjs-dashboard/app/pwayiastltey/S__241999875.jpg">
+            <a download="S__241999875.jpg" target="_blank" href="">
                 <Button> 下載 </Button>
             </a>
         </main>
