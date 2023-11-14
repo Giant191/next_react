@@ -10,6 +10,23 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
+export async function fetchUpdateI(setDate) {
+  //   select * 
+  // from invoices
+  // where status = 'paisley'
+
+  try {
+    const invoiceStatusPromise = sql`UPDATE invoices
+    SET Date = '${setDate}'
+    where status = 'paisley'`;
+
+    return invoiceStatusPromise;
+  } catch (error) {
+    console.error('Database Error:', error);
+    //throw new Error('Failed to fetch revenue data.');
+  }
+}
+
 export async function fetchRevenue() {
   // Add noStore() here prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
