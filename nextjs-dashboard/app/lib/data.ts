@@ -10,7 +10,7 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
-export async function fetchUpdateI(setDate) {
+export async function fetchUpdateI(setDate: string) {
   //   select * 
   // from invoices
   // where status = 'paisley'
