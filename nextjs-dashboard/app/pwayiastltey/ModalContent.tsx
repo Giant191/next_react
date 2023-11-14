@@ -1,4 +1,6 @@
-import ExamplePdf from '@/app/pwayiastltey/S__241999875.jpg'
+'use client';
+
+import { ButtonHTMLAttributes } from "react";
 
 export default function ModalContent({ onClose }) {
   const onButtonClick = () => {
