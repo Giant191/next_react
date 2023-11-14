@@ -32,14 +32,7 @@ export default function ModalContent({ onClose }) {
 
         <div className="modal-footer">
           <slot name="footer">
-            {/* <a
-              href={ExamplePdf}
-              download="Example-PDF-document.jpg"
-              target="_blank"
-              rel="noreferrer"
-            > */}
             <button onClick={onButtonClick} className="rounded-md border p-2 hover:bg-gray-100"> 下載 </button>
-            {/* </a> */}
             <button className="modal-default-button rounded-md border p-2 hover:bg-gray-100" onClick={onClose}>Close</button>
           </slot>
         </div>
