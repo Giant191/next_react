@@ -11,17 +11,17 @@ import {
 import { formatCurrency } from './utils';
 
 export async function fetchUpdateI(setDate: string) {
-  //   select * 
-  // from invoices
-  // where status = 'paisley'
 
   try {
-    const invoiceStatusPromise = sql`UPDATE invoices
-    SET Date = '${setDate}'
-    where status = 'paisley'`;
+    const invoiceStatusPromise = sql`UPDATE invoices SET Date = ${setDate} where status = 'paisley'`;
+    //const invoiceStatusPromise = sql`SELECT * FROM invoices where Date = ${setDate}`;
+    const data = await Promise.all([
+      invoiceStatusPromise
+    ]);
 
-    return invoiceStatusPromise;
+    return 0;
   } catch (error) {
+    console.log(`123456${setDate}`)
     console.error('Database Error:', error);
     //throw new Error('Failed to fetch revenue data.');
   }

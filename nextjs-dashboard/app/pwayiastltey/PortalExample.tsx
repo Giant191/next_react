@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-// import ModalContent from './ModalContent';
 import ModalContent from '@/app/pwayiastltey/ModalContent';
 
 export default function PortalExample() {

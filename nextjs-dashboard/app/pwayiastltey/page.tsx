@@ -5,12 +5,9 @@ import { sql } from '@vercel/postgres';
 import React from 'react';
 import { lusitana } from '@/app/ui/fonts'
 import { Button } from '../ui/button';
-// import PortalExample from './PortalExample';
 import '@/app/pwayiastltey/style.css'
 import PortalExample from '@/app/pwayiastltey/PortalExample';
-import {
-    fetchUpdateI
-} from '@/app/lib/data';
+import UdDt from '@/app/pwayiastltey/UdDt';
 
 // function MyButton() {
 //     function handleClick() {
@@ -25,7 +22,7 @@ import {
 // }
 
 export default function Page() {
-    const latestInvoices = fetchUpdateI('2023-10-10');
+
     return (
         <main className="flex min-h-screen flex-col p-6">
             <p></p>
@@ -36,6 +33,7 @@ export default function Page() {
             <div className="clipping-container">
                 <PortalExample />
             </div>
+            <UdDt />
             {/* <MyButton />
             <a download="S__241999875.jpg" target="_blank" href="">
                 <Button> 下載 </Button>

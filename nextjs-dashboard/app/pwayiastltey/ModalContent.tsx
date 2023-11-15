@@ -1,6 +1,4 @@
-'use client';
-
-import { ButtonHTMLAttributes } from "react";
+'use client'
 
 export default function ModalContent({ onClose }) {
   const onButtonClick = () => {
