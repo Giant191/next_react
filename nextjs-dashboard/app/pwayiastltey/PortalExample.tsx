@@ -5,6 +5,9 @@ import ModalContent from '@/app/pwayiastltey/ModalContent';
 
 export default function PortalExample() {
   const [showModal, setShowModal] = useState(false);
+  const date = new Date();
+  const dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+  const res = fetch(`api/create-pets-table?dateString=${dateString}`);
   return (
     <>
       <button onClick={() => setShowModal(true)} className="rounded-md border p-2 hover:bg-gray-100">

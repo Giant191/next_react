@@ -12,13 +12,6 @@ import { NextResponse } from 'next/server';
 // } from '@/app/lib/data';
 
 export default async function Page() {
-    try {
-        await sql`UPDATE invoices SET Date = '2023-11-15' where status = 'paisley'`;
-    } catch (error) {
-        NextResponse.json({ error }, { status: 500 });
-    }
-    // const date = new Date();
-    // const latestInvoices = await fetchUpdateI(date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate());
     return (
         <main className="flex min-h-screen flex-col p-6">
             <p></p>
