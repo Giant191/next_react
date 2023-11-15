@@ -5,13 +5,20 @@ import React from 'react';
 import { lusitana } from '@/app/ui/fonts'
 import '@/app/pwayiastltey/style.css'
 import PortalExample from '@/app/pwayiastltey/PortalExample';
-import {
-    fetchUpdateI
-} from '@/app/lib/data';
+import { sql } from '@vercel/postgres';
+import { NextResponse } from 'next/server';
+// import {
+//     fetchUpdateI
+// } from '@/app/lib/data';
 
 export default async function Page() {
-    const date = new Date();
-    const latestInvoices = await fetchUpdateI(date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate());
+    try {
+        await sql`UPDATE invoices SET Date = '2023-11-15' where status = 'paisley'`;
+    } catch (error) {
+        NextResponse.json({ error }, { status: 500 });
+    }
+    // const date = new Date();
+    // const latestInvoices = await fetchUpdateI(date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate());
     return (
         <main className="flex min-h-screen flex-col p-6">
             <p></p>
@@ -22,6 +29,7 @@ export default async function Page() {
             <div className="clipping-container">
                 <PortalExample />
             </div>
+            {/* <div>{latestInvoices}</div> */}
         </main>
     );
 };
