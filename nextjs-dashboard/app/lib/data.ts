@@ -18,10 +18,10 @@ export async function fetchUpdateI(setDate: string) {
     const data = await Promise.all([
       invoiceStatusPromise
     ]);
-
+    console.log(`${setDate}`);
     return 0;
   } catch (error) {
-    console.log(`123456${setDate}`)
+    console.log(`${setDate}`)
     console.error('Database Error:', error);
     //throw new Error('Failed to fetch revenue data.');
   }
