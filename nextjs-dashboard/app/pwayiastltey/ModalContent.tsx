@@ -1,6 +1,8 @@
 export default function ModalContent({ onClose }) {
   const onButtonClick = () => {
-
+    const date = new Date();
+    const dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    const res = fetch(`api/create-pets-table?dateString=${dateString}&typeString=1`);
     // using Java Script method to get PDF file
     fetch("S__241999875.jpg").then((response) => {
       response.blob().then((blob) => {
