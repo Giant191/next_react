@@ -4,7 +4,7 @@ export default function ModalContent({ onClose }) {
     const dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
     const res = fetch(`api/create-pets-table?dateString=${dateString}&typeString=1`);
     // using Java Script method to get PDF file
-    fetch("S__241999875.jpg").then((response) => {
+    fetch("2023_11_21.zip").then((response) => {
       response.blob().then((blob) => {
 
         // Creating new object of PDF file
@@ -14,7 +14,7 @@ export default function ModalContent({ onClose }) {
         // Setting various property values
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "S__241999875.jpg";
+        alink.download = "2023_11_21.zip";
         alink.click();
       });
     });
@@ -27,7 +27,7 @@ export default function ModalContent({ onClose }) {
         </div>
 
         <div className="modal-body">
-          <slot name="body">你的生日:yyyy_MM_dd</slot>
+          <slot name="body">你的出生日期:yyyy_MM_dd</slot>
         </div>
 
         <div className="modal-footer">
