@@ -1,23 +1,23 @@
 export default function ModalContent({ onClose }) {
   const onButtonClick = () => {
-    const date = new Date();
-    const dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-    const res = fetch(`api/create-pets-table?dateString=${dateString}&typeString=1`);
-    // using Java Script method to get PDF file
-    fetch("2023_11_21.zip").then((response) => {
-      response.blob().then((blob) => {
+    // const date = new Date();
+    // const dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    // const res = fetch(`api/create-pets-table?dateString=${dateString}&typeString=1`);
+    // // using Java Script method to get PDF file
+    // fetch("2023_11_21.zip").then((response) => {
+    //   response.blob().then((blob) => {
 
-        // Creating new object of PDF file
-        const fileURL =
-          window.URL.createObjectURL(blob);
+    //     // Creating new object of PDF file
+    //     const fileURL =
+    //       window.URL.createObjectURL(blob);
 
-        // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "2023_11_21.zip";
-        alink.click();
-      });
-    });
+    //     // Setting various property values
+    //     let alink = document.createElement("a");
+    //     alink.href = fileURL;
+    //     alink.download = "2023_11_21.zip";
+    //     alink.click();
+    //   });
+    // });
   };
   return (
     <div className="modal-mask">
